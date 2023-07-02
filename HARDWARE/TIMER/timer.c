@@ -63,6 +63,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     if(htim==(&TIM3_Handler))
     {
         //LED1=!LED1;        //LED1·´×ª
-				lv_tick_inc(1);
+//				lv_tick_inc(1);
     }
 }
