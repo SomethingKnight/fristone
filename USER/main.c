@@ -8,8 +8,8 @@
 #include "touch.h"
 #include "timer.h"
 #include "lvgl.h"
-#include "lv_port_disp_template.h"
-#include "lv_port_indev_template.h"
+#include "lvgl_demo.h"
+#include "malloc.h"
 /************************************************
  ALIENTEK 阿波罗STM32F429开发板实验30
  触摸屏实验-HAL库函数版
@@ -192,6 +192,7 @@ int main(void)
     LED_Init();                     //初始化LED 
     KEY_Init();                     //初始化按键
     SDRAM_Init();                   //初始化SDRAM
+		my_mem_init(SRAMIN);
 //    LCD_Init();                     //初始化LCD
 //	tp_dev.init();				    //触摸屏初始化 
 //  	POINT_COLOR=RED;
@@ -208,15 +209,18 @@ int main(void)
 //	
 //	if(tp_dev.touchtype&0X80)ctp_test();//电容屏测试
 //	else rtp_test(); 					//电阻屏测试  
-		TIM3_Init(999,89);
-		lv_init();
-		lv_port_disp_init();
-		lv_port_indev_init();
+//		TIM3_Init(999,89);
+//		lv_init();
+//		lv_port_disp_init();
+//		lv_port_indev_init();
 		
-		lv_obj_t* switch_obj = lv_switch_create(lv_scr_act());
-		lv_obj_set_size(switch_obj, 120, 60);
-		lv_obj_align(switch_obj, LV_ALIGN_CENTER, 0, 0);
+//		lv_obj_t* switch_obj = lv_switch_create(lv_scr_act());
+//		lv_obj_set_size(switch_obj, 120, 60);
+//		lv_obj_align(switch_obj, LV_ALIGN_CENTER, 0, 0);
 	
+//	  lv_demo_stress();
+		//lv_demo_music();
+		lvgl_demo();
 		while(1)
 		{
 				delay_ms(5);
