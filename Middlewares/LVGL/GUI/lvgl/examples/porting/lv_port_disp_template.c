@@ -33,7 +33,8 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
 /**********************
  *  STATIC VARIABLES
  **********************/
-
+static lv_color_t buf_1[800 * 480]  __attribute__((at(0XC0000000 + 1280 * 800 * 2)));                          /*A buffer for 10 rows*/
+static lv_color_t buf_2[800 * 480]  __attribute__((at(0XC0000000 + 1280 * 800 * 2 + 800 * 480 * 2)));                          /*A buffer for 10 rows*/
 /**********************
  *      MACROS
  **********************/
@@ -76,8 +77,8 @@ void lv_port_disp_init(void)
 
     /* Example for 1) */
     static lv_disp_draw_buf_t draw_buf_dsc_1;
-    static lv_color_t buf_1[800 * 10];                          /*A buffer for 10 rows*/
-    lv_disp_draw_buf_init(&draw_buf_dsc_1, buf_1, NULL, 800* 10);   /*Initialize the display buffer*/
+//    static lv_color_t buf_1[800 * 30];                          /*A buffer for 10 rows*/
+    lv_disp_draw_buf_init(&draw_buf_dsc_1, buf_1, buf_2, 800* 480);   /*Initialize the display buffer*/
 
 //    /* Example for 2) */
 //    static lv_disp_draw_buf_t draw_buf_dsc_2;
