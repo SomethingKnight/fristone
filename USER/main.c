@@ -10,6 +10,7 @@
 #include "lvgl.h"
 #include "lv_port_disp_template.h"
 #include "lv_port_indev_template.h"
+#include "lv_demo_stress.h"
 /************************************************
  ALIENTEK 阿波罗STM32F429开发板实验30
  触摸屏实验-HAL库函数版
@@ -213,10 +214,11 @@ int main(void)
 		lv_port_disp_init();
 		lv_port_indev_init();
 		
-		lv_obj_t* switch_obj = lv_switch_create(lv_scr_act());
-		lv_obj_set_size(switch_obj, 120, 60);
-		lv_obj_align(switch_obj, LV_ALIGN_CENTER, 0, 0);
+//		lv_obj_t* switch_obj = lv_switch_create(lv_scr_act());
+//		lv_obj_set_size(switch_obj, 120, 60);
+//		lv_obj_align(switch_obj, LV_ALIGN_CENTER, 0, 0);
 	
+	  lv_demo_stress();
 		while(1)
 		{
 				delay_ms(5);

@@ -339,7 +339,7 @@
               <MiscControls>--diag_suppress=68,111,188,223,546,1295</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F4xx_HAL_Driver\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\Middlewares\LVGL\GUI;..\Middlewares\LVGL\GUI\lvgl;..\Middlewares\LVGL\GUI\lvgl\src;..\Middlewares\LVGL\GUI\lvgl\examples\porting;..\HARDWARE\TIMER</IncludePath>
+              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F4xx_HAL_Driver\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\Middlewares\LVGL\GUI;..\Middlewares\LVGL\GUI\lvgl;..\Middlewares\LVGL\GUI\lvgl\src;..\Middlewares\LVGL\GUI\lvgl\examples\porting;..\HARDWARE\TIMER;..\Middlewares\LVGL\GUI_APP\demos;..\Middlewares\LVGL\GUI_APP\demos\stress</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1527,6 +1527,16 @@
               <FileName>lv_textarea.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Middlewares\LVGL\GUI\lvgl\src\widgets\lv_textarea.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MIddleware/lvgl/GUI_APP</GroupName>
+          <Files>
+            <File>
+              <FileName>lv_demo_stress.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\LVGL\GUI_APP\demos\stress\lv_demo_stress.c</FilePath>
             </File>
           </Files>
         </Group>
