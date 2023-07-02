@@ -9,6 +9,7 @@
 #include "timer.h"
 #include "lvgl.h"
 #include "lvgl_demo.h"
+#include "malloc.h"
 /************************************************
  ALIENTEK 阿波罗STM32F429开发板实验30
  触摸屏实验-HAL库函数版
@@ -191,6 +192,7 @@ int main(void)
     LED_Init();                     //初始化LED 
     KEY_Init();                     //初始化按键
     SDRAM_Init();                   //初始化SDRAM
+		my_mem_init(SRAMIN);
 //    LCD_Init();                     //初始化LCD
 //	tp_dev.init();				    //触摸屏初始化 
 //  	POINT_COLOR=RED;
