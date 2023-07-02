@@ -8,9 +8,7 @@
 #include "touch.h"
 #include "timer.h"
 #include "lvgl.h"
-#include "lv_port_disp_template.h"
-#include "lv_port_indev_template.h"
-#include "lv_demo_music.h"
+#include "lvgl_demo.h"
 /************************************************
  ALIENTEK °¢²¨ÂÞSTM32F429¿ª·¢°åÊµÑé30
  ´¥ÃþÆÁÊµÑé-HAL¿âº¯Êý°æ
@@ -209,17 +207,18 @@ int main(void)
 //	
 //	if(tp_dev.touchtype&0X80)ctp_test();//µçÈÝÆÁ²âÊÔ
 //	else rtp_test(); 					//µç×èÆÁ²âÊÔ  
-		TIM3_Init(999,89);
-		lv_init();
-		lv_port_disp_init();
-		lv_port_indev_init();
+//		TIM3_Init(999,89);
+//		lv_init();
+//		lv_port_disp_init();
+//		lv_port_indev_init();
 		
 //		lv_obj_t* switch_obj = lv_switch_create(lv_scr_act());
 //		lv_obj_set_size(switch_obj, 120, 60);
 //		lv_obj_align(switch_obj, LV_ALIGN_CENTER, 0, 0);
 	
 //	  lv_demo_stress();
-		lv_demo_music();
+		//lv_demo_music();
+		lvgl_demo();
 		while(1)
 		{
 				delay_ms(5);
